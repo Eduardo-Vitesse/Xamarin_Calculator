@@ -217,43 +217,46 @@ namespace AppQuantity
 
             if (valores.Contains("+"))
             {
-                string[] NumDigitados = valores.Split('+');
+                string[] NumDigitados = valores.Split('+', '-', '*', '/');
                 for (int i = 0; i < Convert.ToInt32(NumDigitados.Count()); i++)
                 {
                     total += Convert.ToInt32(NumDigitados[i]);
-                }               
+                }
             }
 
             if (valores.Contains("-"))
             {
-                string[] NumDigitados = valores.Split('-');
+                string[] NumDigitados = valores.Split('+', '-', '*', '/');
                 for (int i = 0; i < Convert.ToInt32(NumDigitados.Count()); i++)
                 {
-                    total -= Convert.ToInt32(NumDigitados[i]);
+                    int num1 = Convert.ToInt32(NumDigitados[0]);
+                    int num2 = Convert.ToInt32(NumDigitados[1]);
+                    total = num1 - num2;
                 }
             }
-            
+
             if (valores.Contains("*"))
             {
-                string[] NumDigitados = valores.Split('*');
-                for (int i = 0; i < Convert.ToInt32(NumDigitados.Count()); i++)
+                string[] NumDigitados = valores.Split('+', '-', '*', '/');
+                int mult = 1, i;
+                for (i = 0; i < Convert.ToInt32(NumDigitados.Count()); i++)
                 {
-                    total *= Convert.ToInt32(NumDigitados[i]);
+                    total = mult *= Convert.ToInt32(NumDigitados[i]);
                 }
             }
-            
+
             if (valores.Contains("/"))
             {
-                string[] NumDigitados = valores.Split('/');
-                for (int i = 0; i < Convert.ToInt32(NumDigitados.Count()); i++)
+                string[] NumDigitados = valores.Split('+', '-', '*', '/');
+                int divisor = 1, i;
+                for (i = 0; i < Convert.ToInt32(NumDigitados.Count()); i++)
                 {
-                    total /= Convert.ToInt32(NumDigitados[i]);
+                    total = divisor /= Convert.ToInt32(NumDigitados[i]);
                 }
             }
-                ScreenTotal.Text = Convert.ToString(total);
+
+            ScreenTotal.Text = Convert.ToString(total);
 
         }
-
-
     }
 }
