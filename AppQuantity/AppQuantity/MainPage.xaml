@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppQuantity.MainPage">
+    <ContentPage.Content>
+
+        <Grid BackgroundColor="Black">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!-- Linha 1 -->           
+            <StackLayout Grid.ColumnSpan="4" VerticalOptions="Center" HorizontalOptions="End">
+                <Label x:Name="ScreenResult" Text="0" TextColor="White" FontSize="28" Margin="0, 0, 35, 0"/>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" VerticalOptions="Center" HorizontalOptions="End">
+                <Label x:Name="ScreenTotal" Text="0" TextColor="White" FontSize="68" Margin="0, -40, 30, 0"/>
+            </StackLayout>
+
+            <!-- Linha 2 -->
+            <Button Text="AC" Clicked="Clear_Clicked" Grid.Column="0" Grid.Row="2" FontSize="32" TextColor="Black" BackgroundColor="#A6A5A6" CornerRadius="10"/>
+            <Button Text="+/-" Grid.Column="1" Grid.Row="2" FontSize="32" TextColor="Black" BackgroundColor="#A6A5A6" CornerRadius="10"/>
+            <Button Text="%" Grid.Column="2" Grid.Row="2" FontSize="32" TextColor="Black" BackgroundColor="#A6A5A6" CornerRadius="10"/>
+            <Button Text="/" Clicked="Divisor_Clicked" Grid.Column="3" Grid.Row="2" FontSize="32" TextColor="White" BackgroundColor="#F19A37" CornerRadius="10"/>
+
+            <!-- Linha 3 -->
+            <Button Text="7" Clicked="Button7_Clicked" Grid.Column="0" Grid.Row="3" FontSize="32" TextColor="White" BackgroundColor="#333333" CornerRadius="10"/>
+            <Button Text="8" Clicked="Button8_Clicked" Grid.Column="1" Grid.Row="3" FontSize="32" TextColor="White" BackgroundColor="#333333" CornerRadius="10"/>
+            <Button Text="9" Clicked="Button9_Clicked" Grid.Column="2" Grid.Row="3" FontSize="32" TextColor="White" BackgroundColor="#333333" CornerRadius="10"/>
+            <Button Text="*" Clicked="Multplay_Clicked" Grid.Column="3" Grid.Row="3" FontSize="32" TextColor="White" BackgroundColor="#F19A37" CornerRadius="10"/>
+
+            <!-- Linha 4 -->
+            <Button Text="4" Clicked="Button4_Clicked" Grid.Column="0" Grid.Row="4" FontSize="32" TextColor="White" BackgroundColor="#333333" CornerRadius="10"/>
+            <Button Text="5" Clicked="Button5_Clicked" Grid.Column="1" Grid.Row="4" FontSize="32" TextColor="White" BackgroundColor="#333333" CornerRadius="10"/>
+            <Button Text="6" Clicked="Button6_Clicked" Grid.Column="2" Grid.Row="4" FontSize="32" TextColor="White" BackgroundColor="#333333" CornerRadius="10"/>
+            <Button Text="-" Clicked="ButtonLess_Clicked" Grid.Column="3" Grid.Row="4" FontSize="32" TextColor="White" BackgroundColor="#F19A37" CornerRadius="10"/>
+
+            <!-- Linha 5 -->
+            <Button Text="1" Clicked="Button1_Clicked" Grid.Column="0" Grid.Row="5" FontSize="32" TextColor="White" BackgroundColor="#333333" CornerRadius="10"/>
+            <Button Text="2" Clicked="Button2_Clicked" Grid.Column="1" Grid.Row="5" FontSize="32" TextColor="White" BackgroundColor="#333333" CornerRadius="10"/>
+            <Button Text="3" Clicked="Button3_Clicked" Grid.Column="2" Grid.Row="5" FontSize="32" TextColor="White" BackgroundColor="#333333" CornerRadius="10"/>
+            <Button Text="+" Clicked="ButtonPlus_Clicked" Grid.Column="3" Grid.Row="5" FontSize="32" TextColor="White" BackgroundColor="#F19A37" CornerRadius="10"/>
+
+            <!-- Linha 6 -->
+            <Button Text="0" Clicked="Button0_Clicked" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" FontSize="32" TextColor="White" BackgroundColor="#333333" CornerRadius="10"/>
+            <Button Text="." Grid.Column="2" Grid.Row="6" FontSize="32" TextColor="White" BackgroundColor="#333333" CornerRadius="10"/>
+            <Button Text="=" Clicked="Equals_Clicked" Grid.Column="3" Grid.Row="6" FontSize="32" TextColor="White" BackgroundColor="#F19A37"  CornerRadius="10"/>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
