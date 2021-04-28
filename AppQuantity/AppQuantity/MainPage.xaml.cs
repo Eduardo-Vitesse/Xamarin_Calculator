@@ -248,10 +248,11 @@ namespace AppQuantity
             if (valores.Contains("/"))
             {
                 string[] NumDigitados = valores.Split('+', '-', '*', '/');
-                int divisor = 1, i;
-                for (i = 0; i < Convert.ToInt32(NumDigitados.Count()); i++)
+                for (int i = 0; i < Convert.ToInt32(NumDigitados.Count()); i++)
                 {
-                    total = divisor /= Convert.ToInt32(NumDigitados[i]);
+                    int num1 = Convert.ToInt32(NumDigitados[0]);
+                    int num2 = Convert.ToInt32(NumDigitados[1]);
+                    total = num1 / num2;
                 }
             }
 
